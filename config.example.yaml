@@ -1,0 +1,15 @@
+# Example configuration for BlockDAG Mirror CLI
+
+src_org: blockdag-network-labs
+
+dst_orgs:
+  - strattice
+  - brainstormonline
+  - blockdag-engineering
+
+tokens_env:
+  # Environment variable names for tokens
+  src: SRC_GH_TOKEN
+  strattice: DST_STRAT_TOKEN
+  brainstormonline: DST_BRAIN_TOKEN
+  blockdag-engineering: DST_ENG_TOKEN
