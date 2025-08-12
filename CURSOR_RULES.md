@@ -34,3 +34,9 @@ This document defines operational rules for the Cursor AI agent used with the Bl
    - At the end of the run, emit a summary of degraded repos and reasons.
 
 Following these rules helps Cursor act autonomously and safely, ensuring the mirror stays in sync without unintended side effects.
+
+8. **Account-based operations (no central API)**
+- Operate using each GitHub account's personal access token (PAT) individually; do not link or share tokens across organisations.
+- Avoid using a single API or service that has access to multiple organisations at once. Use direct `git` commands (`clone`, `fetch`, `push`) wherever possible and separate authentication contexts for each destination.
+- Maintain separate configuration for each account; do not reuse or multiplex credentials.
+- When enumerating repositories or performing maintenance, treat each destination org as isolated and ensure that actions never cross boundaries.
